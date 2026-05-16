@@ -27,8 +27,8 @@ const links = [
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground">
-      <section className="mx-auto flex min-h-screen w-full max-w-lg flex-col justify-center px-2 py-8 sm:px-5">
-        <div className="border border-masc-steel/45 bg-[var(--masc-glass)] p-3 backdrop-blur sm:p-4">
+      <section className="mx-auto flex min-h-screen w-full max-w-lg flex-col justify-center px-0 py-0 sm:px-5 sm:py-8">
+        <div className="border border-masc-steel/45 bg-[var(--masc-glass)] p-0 backdrop-blur sm:p-4">
           <div
             className="bg-masc-surface px-5 py-7 sm:px-7"
             style={{
