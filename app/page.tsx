@@ -1,65 +1,129 @@
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa";
+import { HiOutlineEnvelope, HiOutlineGlobeAlt } from "react-icons/hi2";
+
+const links = [
+  {
+    label: "E-mail",
+    value: "mascautohaus.piracicaba@gmail.com",
+    href: "mailto:mascautohaus.piracicaba@gmail.com",
+    icon: HiOutlineEnvelope,
+  },
+  {
+    label: "WhatsApp",
+    value: "(19) 99999-9999",
+    href: "https://wa.me/5519999999999",
+    icon: FaWhatsapp,
+  },
+  {
+    label: "Site",
+    value: "Em breve ...",
+    href: "#",
+    disabled: true,
+    icon: HiOutlineGlobeAlt,
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="min-h-screen bg-background text-foreground">
+      <section className="mx-auto flex min-h-screen w-full max-w-lg flex-col justify-center px-2 py-8 sm:px-5">
+        <div className="border border-masc-steel/45 bg-[var(--masc-glass)] p-3 backdrop-blur sm:p-4">
+          <div
+            className="bg-masc-surface px-5 py-7 sm:px-7"
+            style={{
+              backgroundImage:
+                "linear-gradient(145deg, rgba(34, 41, 54, 0.84) 0%, rgba(17, 21, 29, 0.88) 54%, rgba(0, 0, 0, 0.94) 100%), url('/images/backgroud/couro.jpg')",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <header className="flex flex-col items-center text-center">
+              <div className="mb-6 h-28 w-28">
+                <Image
+                  src="/images/logos/logo_MASC_metalizado_icone.png"
+                  alt="Logo MASC Autohaus"
+                  width={596}
+                  height={596}
+                  priority
+                  className="h-full w-full object-contain scale-200"
+                />
+              </div>
+
+              <h1 className="text-3xl font-black uppercase leading-none text-masc-offwhite tracking-widest">
+                MASC Autohaus
+              </h1>
+
+              <p className="-mx-5 mt-5 bg-masc-steel/90 px-5 py-4 text-sm font-semibold uppercase leading-6 tracking-[0.12em] text-masc-navy sm:-mx-7 sm:px-7">
+                Automóveis selecionados com entrega nacional
+              </p>
+            </header>
+
+            <div className="my-7 h-px bg-masc-steel/45" />
+
+            <nav aria-label="Canais de contato" className="space-y-3">
+              {links.map((link) => {
+                const Icon = link.icon;
+                const className =
+                  "group flex min-h-14 w-full items-stretch justify-between overflow-hidden border border-[var(--masc-line)] bg-masc-surface text-left transition duration-200 sm:min-h-16";
+
+                const content = (
+                  <>
+                    <span className="flex w-14 shrink-0 items-center justify-center bg-masc-steel text-2xl text-masc-navy transition group-hover:text-masc-offwhite sm:w-16 sm:text-3xl">
+                      <Icon aria-hidden="true" />
+                    </span>
+                    <span className="min-w-0 flex-1 self-center px-3 py-2.5 sm:px-4 sm:py-3">
+                      <span className="block text-[10px] font-semibold uppercase tracking-[0.2em] text-masc-steel sm:text-xs sm:tracking-[0.22em]">
+                        {link.label}
+                      </span>
+                      <span className="mt-1 block truncate text-xs font-medium text-masc-offwhite sm:text-sm">
+                        {link.value}
+                      </span>
+                    </span>
+                    <span className="flex shrink-0 items-center px-3 text-base text-masc-steel transition group-hover:translate-x-1 group-hover:text-masc-offwhite sm:px-4 sm:text-lg">
+                      {link.disabled ? "..." : "↗"}
+                    </span>
+                  </>
+                );
+
+                if (link.disabled) {
+                  return (
+                    <div
+                      key={link.label}
+                      aria-disabled="true"
+                      className={`${className} cursor-default opacity-70`}
+                    >
+                      {content}
+                    </div>
+                  );
+                }
+
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className={`${className} hover:border-masc-steel hover:bg-masc-surface-muted`}
+                    target={link.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      link.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                  >
+                    {content}
+                  </a>
+                );
+              })}
+            </nav>
+
+            <footer className="mt-8 border-t border-masc-steel/45 pt-5 text-center">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-masc-steel">
+                Velocidade. Segurança. Eficiência.
+              </p>
+            </footer>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
