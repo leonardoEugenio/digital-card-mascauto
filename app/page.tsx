@@ -33,7 +33,7 @@ export default function Home() {
             className="bg-masc-surface px-5 py-7 sm:px-7"
             style={{
               backgroundImage:
-                "linear-gradient(145deg, rgba(34, 41, 54, 0.84) 0%, rgba(17, 21, 29, 0.88) 54%, rgba(0, 0, 0, 0.94) 100%), url('/images/backgroud/couro.jpg')",
+                "linear-gradient(145deg, rgba(34, 41, 54, 0.54) 0%, rgba(17, 21, 29, 0.58) 54%, rgba(0, 0, 0, 0.68) 100%), url('/images/backgroud/couro.jpg')",
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
@@ -54,7 +54,7 @@ export default function Home() {
                 MASC Autohaus
               </h1>
 
-              <p className="-mx-5 mt-5 bg-masc-steel/90 px-5 py-4 text-sm font-semibold uppercase leading-6 tracking-[0.12em] text-masc-navy sm:-mx-7 sm:px-7">
+              <p className="-mx-5 mt-5 bg-masc-steel/90 px-5 py-4 text-sm font-semibold uppercase leading-6 tracking-[0.12em] text-masc-offwhite sm:-mx-7 sm:px-7">
                 Automóveis selecionados com entrega nacional
               </p>
             </header>
