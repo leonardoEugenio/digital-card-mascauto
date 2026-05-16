@@ -11,10 +11,11 @@ const renogare = localFont({
 const title = "MASC Autohaus | Compra e venda de automóveis no Brasil";
 const description =
   "MASC Autohaus: automóveis novos e seminovos selecionados, com curadoria, procedência e atendimento personalizado para compra e venda em todo o Brasil.";
-const shareImage = "/images/logos/logo_MASC_iconebranco_fundoazul.png";
+const siteUrl = "https://mascautohaus.com.br";
+const shareImage = `${siteUrl}/images/logos/logo_MASC_iconebranco_fundoazul.png`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://mascautohaus.com.br"),
+  metadataBase: new URL(siteUrl),
   title,
   description,
   applicationName: "MASC Autohaus",
@@ -48,12 +49,13 @@ export const metadata: Metadata = {
         url: shareImage,
         width: 596,
         height: 596,
+        type: "image/png",
         alt: "Logo MASC Autohaus",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
     images: [
