@@ -21,20 +21,40 @@ Regras:
 
 ## Contexto do Projeto
 
-O projeto é um cartão virtual para a MASC Autohaus, empresa de revenda de carros.
+O projeto é um cartão virtual para a MASC Autohaus, empresa de compra e venda de automóveis novos e seminovos selecionados.
 
-A empresa presta serviços em:
-- Piracicaba
-- região de Piracicaba
+A empresa atende:
+- Brasil todo
+- Piracicaba como origem/localidade da operação
 
 O cartão digital deve funcionar como uma página de links, baseada na lógica de layouts como Linktree, com foco em redirecionar o usuário para os principais canais de contato da empresa.
 
 Links principais esperados:
-- e-mail
-- telefone
-- site
+- e-mail: `mascautohaus.piracicaba@gmail.com`
+- WhatsApp: placeholder até definição do número oficial
+- site: `https://mascautohaus.com.br`
 
 O objetivo da experiência é permitir contato rápido, direto e premium, mantendo a identidade visual sofisticada da MASC Autohaus.
+
+Diferenciais a comunicar:
+- curadoria
+- procedência
+- atendimento personalizado
+
+Frase principal:
+- Automóveis novos e seminovos selecionados com entrega nacional.
+
+Descrição SEO:
+- MASC Autohaus: automóveis novos e seminovos selecionados, com curadoria, procedência e atendimento personalizado para compra e venda em todo o Brasil.
+
+Título SEO:
+- MASC Autohaus | Compra e venda de automóveis no Brasil
+
+Imagem de compartilhamento:
+- `public/images/logos/logo_MASC_iconebranco_fundoazul.png`
+
+Domínio/canonical:
+- `https://mascautohaus.com.br`
 
 ---
 
@@ -124,19 +144,19 @@ Mapeamento Tailwind esperado:
 
 ## Principal
 
-Avenir
+Renogare
 
 ## Uso
 
 Títulos:
-- Avenir Heavy
-- Avenir Black
+- Renogare Regular
+- caixa alta quando fizer sentido
 
 Textos:
-- Avenir Book
-- Avenir Regular
+- Renogare Regular
 
 Fallback:
+- Avenir
 - Inter
 - Helvetica Neue
 - sans-serif
@@ -144,9 +164,12 @@ Fallback:
 ## Aplicação
 
 Usar a pilha:
-- `Avenir, Inter, "Helvetica Neue", sans-serif`
+- `var(--font-renogare), Avenir, Inter, "Helvetica Neue", sans-serif`
 
-Não depender de carregamento remoto de fontes para o tema base.
+Não depender de carregamento remoto de fontes para o tema base. Usar `next/font/local`.
+
+Fonte local ativa:
+- `public/fonts/Renogare-Regular.otf`
 
 Títulos devem usar:
 - peso alto

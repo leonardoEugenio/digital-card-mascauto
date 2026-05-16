@@ -8,9 +8,72 @@ const renogare = localFont({
   display: "swap",
 });
 
+const title = "MASC Autohaus | Compra e venda de automóveis no Brasil";
+const description =
+  "MASC Autohaus: automóveis novos e seminovos selecionados, com curadoria, procedência e atendimento personalizado para compra e venda em todo o Brasil.";
+const shareImage = "/images/logos/logo_MASC_iconebranco_fundoazul.png";
+
 export const metadata: Metadata = {
-  title: "MASC Autohaus",
-  description: "Revenda de carros Precisão. Performance. Engenharia.",
+  metadataBase: new URL("https://mascautohaus.com.br"),
+  title,
+  description,
+  applicationName: "MASC Autohaus",
+  authors: [{ name: "MASC Autohaus" }],
+  creator: "MASC Autohaus",
+  publisher: "MASC Autohaus",
+  keywords: [
+    "MASC Autohaus",
+    "compra e venda de automóveis",
+    "automóveis novos",
+    "automóveis seminovos",
+    "revenda de carros",
+    "veículos selecionados",
+    "curadoria automotiva",
+    "procedência veicular",
+    "atendimento personalizado",
+    "Brasil",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title,
+    description,
+    url: "/",
+    siteName: "MASC Autohaus",
+    locale: "pt_BR",
+    type: "website",
+    images: [
+      {
+        url: shareImage,
+        width: 596,
+        height: 596,
+        alt: "Logo MASC Autohaus",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+    images: [
+      {
+        url: shareImage,
+        alt: "Logo MASC Autohaus",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 };
 
 export default function RootLayout({
